@@ -1,14 +1,10 @@
 package com.epam.gymcrm;
 
-import com.epam.gymcrm.dto.TrainerDto;
-import com.epam.gymcrm.facade.GymFacade;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
 
-@Component
+
 public class ApplicationRunner implements CommandLineRunner {
 
 
