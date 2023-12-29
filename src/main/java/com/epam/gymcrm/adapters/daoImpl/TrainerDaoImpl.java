@@ -28,8 +28,7 @@ public class TrainerDaoImpl implements TrainerDao {
 
     @Override
     public Trainer get(int id) {
-        //Trainer searched =  storage.getStorage().get("Trainer").get(id);
-        return null;
+        return (Trainer) storage.getStorage().get("Trainer").get(id);
     }
 
     @Override
@@ -42,7 +41,7 @@ public class TrainerDaoImpl implements TrainerDao {
     @Override
     public Trainer createTrainer(Trainer trainer) {
         Map<Integer, Object> trainers = storage.getStorage().get("Trainer");
-        trainers.put(trainer.getId(),trainer);
+        trainers.put(trainer.getTrainerId(),trainer);
         storage.getStorage().put("Trainer",trainers);
         //System.out.println(storage.getStorage());
 

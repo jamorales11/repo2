@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Trainer {
 
-    private Integer id;
+    private Integer trainerId;
 
     private String specialization;
 
@@ -12,8 +12,8 @@ public class Trainer {
 
     private ArrayList<Trainee> trainees;
 
-    public Trainer(Integer id, String specialization, Integer userId /*, ArrayList<Trainee> trainees */) {
-        this.id = id;
+    public Trainer(Integer trainerId, String specialization, Integer userId /*, ArrayList<Trainee> trainees */) {
+        this.trainerId = trainerId;
         this.specialization = specialization;
         this.userId = userId;
         this.trainees = new ArrayList<>();
@@ -24,12 +24,12 @@ public class Trainer {
     }
 
 
-    public Integer getId() {
-        return id;
+    public Integer getTrainerId() {
+        return trainerId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setTrainerId(Integer trainerId) {
+        this.trainerId = trainerId;
     }
 
     public String getSpecialization() {

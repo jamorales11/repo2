@@ -1,29 +1,32 @@
-package com.epam.gymcrm.domain.model;
+package com.epam.gymcrm.adapters.dto;
+
+import com.epam.gymcrm.domain.model.Trainer;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Trainee {
+public class TraineeDto {
 
     private Integer traineeId;
+
 
     private String dateOfBirth;
     private String address;
 
-    private Integer userId;
+    private UserDto userDto;
 
     private ArrayList<Trainer> trainers;
 
-    public Trainee(Integer traineeId, String dateOfBirth, String address, Integer userId, ArrayList<Trainer> trainers) {
+    public TraineeDto() {
+    }
+
+    public TraineeDto(Integer traineeId, String dateOfBirth, String address, UserDto userDto, ArrayList<Trainer> trainers) {
         this.traineeId = traineeId;
         this.dateOfBirth = dateOfBirth;
         this.address = address;
-        this.userId = userId;
+        this.userDto = userDto;
         this.trainers = trainers;
-    }
-
-
-    public Trainee() {
     }
 
     public Integer getTraineeId() {
@@ -50,13 +53,12 @@ public class Trainee {
         this.address = address;
     }
 
-
-    public Integer getUserId() {
-        return userId;
+    public UserDto getUserDto() {
+        return userDto;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setUserDto(UserDto userDto) {
+        this.userDto = userDto;
     }
 
     public ArrayList<Trainer> getTrainers() {
